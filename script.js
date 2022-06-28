@@ -21,7 +21,7 @@ function storeData() {
 }
 
 function getData() {
-  bookArr = JSON.parse(localStorage.getItem('bookCollection'));
+  bookArr = JSON.parse(localStorage.getItem('bookCollection')) || [ ] ;
 }
 
 function removeBook(id) {
