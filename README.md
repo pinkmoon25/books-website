@@ -1,21 +1,9 @@
-# books-website
+# bookList-website
 
-# Project Name : Awsome Books ♻️
+This is  Pair to Pair project to help you find and remember the best books you read.
 
-This is  Pair to Pair project to help you find and remember the best books to read.
+# Project Name : Awesome Books ♻️
 
-# Screenshots
-- Desktop Layout
-
-![Desktop_Layout](assets/img/desktop.png)
-
-- Mobile Layout
-
-![Mobile_Layout](assets/img/mobile.png)
-
-
-
-Additional description about the project and its features.
 
 ## Built With
 
@@ -28,12 +16,6 @@ Additional description about the project and its features.
 ## Live Demo link
 
 [Live Demo Link](https://PinkMoon25.github.io/books-website/)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -55,21 +37,17 @@ $ npm start
 ```
 ### Usage
 For anyone that whats to learn html & css & Js
-### Run tests
-N/A
-### Deployment
-N/A
 
 
 ## Authors
 
-👤 **Author 1 **
+👤 **Tushar Singh **
 
 - GitHub: [@PinkMoon25](https://github.com/PinkMoon25/)
-- Twitter: [@twitterhandle](https://twitter.com/---)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/---/)
+- Twitter: [@twitterhandle](https://twitter.com/TusharS90674484)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tushar-singh-6b063a14b/)
 
-👤 **Author 2 **
+👤 **Mike Van Eckendonk **
 
 - GitHub: [@mrEckendonk](https://github.com/mrEckendonk)
 - Twitter: [@twitter](https://twitter.com/mike_eckendonk)
