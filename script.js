@@ -58,9 +58,13 @@ class Book {
   }
 
   static removeBook(id) {
-    const book = Book.getBook();
-    book.splice(id, 1);
-    localStorage.setItem('bookCollection', JSON.stringify(book));
+    const books = Book.getBook();
+    books.forEach((book, index) => {
+      if(book.id === id) {
+        books.splice(index, 1);
+      }
+    })
+    localStorage.setItem('bookCollection', JSON.stringify(books));
   }
 }
 
@@ -68,8 +72,8 @@ addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (title.value === '' || author.value === '') return;
 
-  const bookArr = Book.getBook();
-  const newBook = new Book(title.value, author.value, bookArr.length);
+  const bookId = Math.floor(Math.random() * 1000);
+  const newBook = new Book(title.value, author.value, bookId);
   Book.addBook(newBook);
   Book.storeBook(newBook);
   title.value = '';
