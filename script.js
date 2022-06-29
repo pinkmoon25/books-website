@@ -60,10 +60,10 @@ class Book {
   static removeBook(id) {
     const books = Book.getBook();
     books.forEach((book, index) => {
-      if(book.id === id) {
+      if (book.id === id) {
         books.splice(index, 1);
       }
-    })
+    });
     localStorage.setItem('bookCollection', JSON.stringify(books));
   }
 }
