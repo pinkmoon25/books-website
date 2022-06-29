@@ -5,8 +5,6 @@
 }
 
 body {
-  width: 80%;
-  margin: 25px auto;
   text-align: center;
   box-sizing: border-box;
 }
@@ -14,43 +12,45 @@ body {
 h1 {
   text-align: center;
   font-size: 2.5em;
+  color: rebeccapurple;
 }
 
 .book {
-  text-align: left;
-  border: 3px solid #000;
-
-  /* display: flex; */
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
+  width: 80vw;
+  border: 2px solid #000;
+  margin: auto;
 }
 
-.book h2 {
-  font-size: 1.5em;
-  margin: 0;
-  padding: 0;
+.line-break {
+  width: 100px;
+  border-bottom: 2px solid rebeccapurple;
+  margin: 5% auto;
 }
 
 .new-book {
-  font-size: 1.25em;
-  border-bottom: 1px solid #000;
-  padding: 10px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.25em;
+  border-bottom: 1px solid #000;
 }
 
 .remove {
   height: 30px;
-  padding: 0 20px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: rebeccapurple;
+  color: white;
 }
 
-.form-cont {
+.form-title {
+  margin: 0;
   font-size: 1.35em;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
+  font-weight: normal;
+  color: rebeccapurple;
 }
 
 #add-book {
@@ -60,13 +60,11 @@ h1 {
   align-items: center;
 }
 
-/* #add-book input {
-  width: 50%;
-  height: 30px;
-  padding-left: 10px;
-} */
-
 #add {
-  margin-left: auto;
-  margin-right: 29%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: rebeccapurple;
+  color: white;
 }

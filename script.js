@@ -9,9 +9,7 @@ class Book {
     this.author = author;
     this.id = id;
   }
-}
 
-class BookData {
   static addBook(book) {
     const div = document.createElement('div');
     const para = document.createElement('p');
@@ -25,7 +23,7 @@ class BookData {
     removeBtn.setAttribute('id', `${book.id}`);
     removeBtn.textContent = 'remove';
     removeBtn.addEventListener('click', () => {
-      Storage.removeBook(book.id);
+      Book.removeBook(book.id);
       removeBtn.parentElement.remove();
     });
 
@@ -36,14 +34,12 @@ class BookData {
   }
 
   static displayBooks() {
-    const books = Storage.getBook();
+    const books = Book.getBook();
     books.forEach((book) => {
-      BookData.addBook(book);
+      Book.addBook(book);
     });
   }
-}
 
-class Storage {
   static getBook() {
     let bookArr = [];
     if (localStorage.getItem('bookCollection') !== null) {
@@ -56,13 +52,13 @@ class Storage {
   }
 
   static storeBook(book) {
-    const books = Storage.getBook();
+    const books = Book.getBook();
     books.push(book);
     localStorage.setItem('bookCollection', JSON.stringify(books));
   }
 
   static removeBook(id) {
-    const book = Storage.getBook();
+    const book = Book.getBook();
     book.splice(id, 1);
     localStorage.setItem('bookCollection', JSON.stringify(book));
   }
@@ -72,15 +68,15 @@ addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (title.value === '' || author.value === '') return;
 
-  const bookArr = Storage.getBook();
+  const bookArr = Book.getBook();
   const newBook = new Book(title.value, author.value, bookArr.length);
-  BookData.addBook(newBook);
-  Storage.storeBook(newBook);
+  Book.addBook(newBook);
+  Book.storeBook(newBook);
   title.value = '';
   author.value = '';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  Storage.getBook();
-  BookData.displayBooks();
+  Book.getBook();
+  Book.displayBooks();
 });
