@@ -68,3 +68,43 @@ h1 {
   background-color: rebeccapurple;
   color: white;
 }
+
+nav {
+  width: 80vw;
+  border: 2px solid #000;
+  margin: auto;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 80vw;
+  border: 2px solid #000;
+  margin: 0 10vw;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
