@@ -84,3 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
   Book.getBook();
   Book.displayBooks();
 });
+
+const list = document.querySelector('.list');
+const add = document.querySelector('.add');
+const contact = document.querySelector('.contact');
+
+const activateList = () => {
+  list.classList.add('active');
+  add.classList.remove('active');
+  contact.classList.remove('active');
+};
+
+const activateForm = () => {
+  list.classList.remove('active');
+  add.classList.add('active');
+  contact.classList.remove('active');
+};
+
+list.addEventListener('click', activateList);
+add.addEventListener('click', activateForm);
+contact.addEventListener('click', activateForm);
+window.onload = activateList;
+// window.onload = activateForm;
