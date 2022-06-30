@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Book.displayBooks();
 });
 
-//Navigation
+// Navigation
 
 const list = document.querySelector('.list');
 const addNew = document.querySelector('.add-new');
@@ -101,16 +101,16 @@ list.addEventListener('click', () => {
   listSection.classList.remove('hide');
   bookForm.classList.add('hide');
   contactSection.classList.add('hide');
-})
+});
 
 addNew.addEventListener('click', () => {
   bookForm.classList.remove('hide');
   listSection.classList.add('hide');
   contactSection.classList.add('hide');
-})
+});
 
 contact.addEventListener('click', () => {
   contactSection.classList.remove('hide');
   bookForm.classList.add('hide');
   listSection.classList.add('hide');
-})
+});

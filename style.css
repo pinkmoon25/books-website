@@ -46,7 +46,9 @@ a {
   height: 100vh;
 }
 
-.booklist, .form, .contact-info {
+.booklist,
+.form,
+.contact-info {
   height: 83vh;
 }
 
@@ -69,6 +71,10 @@ h1 {
   border: none;
   border-bottom: 2px solid rebeccapurple;
   margin-top: 5%;
+}
+
+footer > p {
+  margin: 0;
 }
 
 .new-book {
@@ -99,7 +105,8 @@ h1 {
   color: white;
 }
 
-.form , .contact-info{
+.form,
+.contact-info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,25 +134,22 @@ h1 {
   transition: all 0.3s ease;
 }
 
-#add:hover {
-
-}
-
-input[name]{
+input[name] {
   width: 100%;
   padding: 12px;
   border: 1px solid rebeccapurple;
   border-radius: 4px;
 }
 
+.address-list {
+  display: block;
+  list-style-type: disc;
+}
+
 footer {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 12px 0;
   color: #fff;
-}
-
-footer > p {
-  margin: 0;
 }
 
 i {
