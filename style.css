@@ -5,11 +5,56 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   text-align: center;
   box-sizing: border-box;
 }
 
+header {
+  background-color: rgba(102, 51, 153, 0.7);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style-type: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+ul > li:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1) skew(10deg);
+  border-bottom: 1px solid rebeccapurple;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.booklist,
+.form,
+.contact-info {
+  height: 83vh;
+}
+
 h1 {
+  margin: 0;
+  padding: 20px 0;
   text-align: center;
   font-size: 2.5em;
   color: rebeccapurple;
@@ -17,23 +62,37 @@ h1 {
 
 .book {
   width: 80vw;
-  border: 2px solid #000;
+  border: 2px solid rebeccapurple;
   margin: auto;
 }
 
 .line-break {
   width: 100px;
+  border: none;
   border-bottom: 2px solid rebeccapurple;
-  margin: 5% auto;
+  margin-top: 5%;
+}
+
+footer > p {
+  margin: 0;
 }
 
 .new-book {
+  margin: auto;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.25em;
-  border-bottom: 1px solid #000;
+}
+
+.new-book > p {
+  margin: 0;
+  padding: 12px 0;
+}
+
+.new-book:nth-child(odd) {
+  background-color: skyblue;
 }
 
 .remove {
@@ -46,17 +105,22 @@ h1 {
   color: white;
 }
 
-.form-title {
-  margin: 0;
-  font-size: 1.35em;
-  font-weight: normal;
-  color: rebeccapurple;
+.form,
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  flex-direction: column;
+  text-align: start;
 }
 
 #add-book {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 26px;
   align-items: center;
 }
 
@@ -67,4 +131,36 @@ h1 {
   font-weight: 600;
   background-color: rebeccapurple;
   color: white;
+  transition: all 0.3s ease;
+}
+
+input[name] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rebeccapurple;
+  border-radius: 4px;
+}
+
+.address-list {
+  display: block;
+  list-style-type: disc;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px 0;
+  color: #fff;
+}
+
+i {
+  font-size: larger;
+  transition: all 0.35s ease;
+}
+
+i:hover {
+  transform: rotate(360deg);
+}
+
+.hide {
+  display: none;
 }

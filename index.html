@@ -6,22 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5ff773556d.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
     <title>Book List</title>
 </head>
 
 <body>
-    <h1>My BookList</h1>
-    <div class="book"></div>
-    <hr class="line-break">
-        <form id="add-book">
-            <h3 class="form-title">Add a new book</h3>
-            <input type="text" id="title" name="title" placeholder="Title">
-            <input type="text" id="author" name="author" placeholder="author">
-            <input type="submit" id="add" value="Add Book">
-        </form>
-    
-
-    <script src="script.js"></script>
+    <div class="container">
+        <header>
+            <nav>
+                <h3>Awesome Books</h3>
+                <ul>
+                    <li class="list"><a href="#">List</a></li>
+                    <li class="add-new"><a href="#">Add new</a></li>
+                    <li class="contact"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="booklist">
+            <h1>My BookList</h1>
+            <div class="book"></div>
+            <hr class="line-break">
+        </section>
+        <section class="form hide">
+            <form id="add-book">
+                <h1 class="form-title">Add a new book</h1>
+                <input type="text" id="title" name="title" placeholder="Title">
+                <input type="text" id="author" name="author" placeholder="author">
+                <input type="submit" id="add" value="Add Book">
+            </form>
+        </section>
+        <section class="contact-info hide">
+            <h1>Contact informantion</h1>
+            <p>Do you have any questions or you just want to say "Hello"?<br>
+                You can reach out to us!</p>
+            <address>
+                <ul class="address-list">
+                    <li>Our Email: mail@mail.com</li>
+                    <li>Our Phone: +1 555 234 234</li>
+                    <li>Our Address: Pirates 2022, Silicon valley, California</li>
+                </ul>
+            </address>
+        </section>
+        <footer>
+            <p>Copyright &#169; 2022 with &#10084; Mike <a href="https://github.com/mrEckendonk"><i
+                        class="fa-brands fa-github"></i></a>
+                and Tushar <a href="https://github.com/PinkMoon25"><i class="fa-brands fa-github"></i></a></p>
+        </footer>
+    </div>
 </body>
 
 </html>
