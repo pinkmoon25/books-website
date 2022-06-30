@@ -85,24 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
   Book.displayBooks();
 });
 
+//Navigation
+
 const list = document.querySelector('.list');
-const add = document.querySelector('.add');
+const addNew = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
+const listSection = document.querySelector('.booklist');
+const bookForm = document.querySelector('.form');
+const contactSection = document.querySelector('.contact-info');
 
-const activateList = () => {
-  list.classList.add('active');
-  add.classList.remove('active');
-  contact.classList.remove('active');
-};
+list.addEventListener('click', () => {
+  listSection.removeAttribute('id');
+  bookForm.setAttribute('id', 'hide');
+  contactSection.setAttribute('id', 'hide');
+})
 
-const activateForm = () => {
-  list.classList.remove('active');
-  add.classList.add('active');
-  contact.classList.remove('active');
-};
+addNew.addEventListener('click', () => {
+  bookForm.removeAttribute('id');
+  listSection.setAttribute('id', 'hide');
+  contactSection.setAttribute('id', 'hide');
+})
 
-list.addEventListener('click', activateList);
-add.addEventListener('click', activateForm);
-contact.addEventListener('click', activateForm);
-window.onload = activateList;
-// window.onload = activateForm;
+contact.addEventListener('click', () => {
+  contactSection.removeAttribute('id');
+  bookForm.setAttribute('id', 'hide');
+  listSection.setAttribute('id', 'hide');
+})

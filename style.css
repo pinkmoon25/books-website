@@ -5,13 +5,56 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   text-align: center;
   box-sizing: border-box;
 }
 
-h2 {
+header {
+  background-color: rgba(102, 51, 153, 0.7);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style-type: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+ul > li:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1) skew(10deg);
+  border-bottom: 1px solid rebeccapurple;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.booklist, .form, .contact-info {
+  height: 83vh;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 2.5em;
   color: rebeccapurple;
 }
 
@@ -46,17 +89,21 @@ h2 {
   color: white;
 }
 
-.form-title {
-  margin: 0;
-  font-size: 1.35em;
-  font-weight: normal;
-  color: rebeccapurple;
+.form , .contact-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  flex-direction: column;
+  text-align: start;
 }
 
 #add-book {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 26px;
   align-items: center;
 }
 
@@ -69,42 +116,32 @@ h2 {
   color: white;
 }
 
-nav {
-  width: 80vw;
-  border: 2px solid #000;
-  margin: auto;
-  padding-left: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  padding-right: 10px;
-  border-right: 1px solid black;
-}
-
-nav ul li {
-  cursor: pointer;
-}
-
-nav ul li:last-child {
-  border-right: none;
+input[name]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rebeccapurple;
+  border-radius: 4px;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 80vw;
-  border: 2px solid #000;
-  margin: 0 10vw;
-  margin-bottom: 5px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px 0;
+  color: #fff;
+}
+
+footer > p {
+  margin: 0;
+}
+
+i {
+  font-size: larger;
+  transition: all 0.35s ease;
+}
+
+i:hover {
+  transform: rotate(360deg);
+}
+
+#hide {
+  display: none;
 }
