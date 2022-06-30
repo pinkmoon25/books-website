@@ -60,23 +60,33 @@ h1 {
 
 .book {
   width: 80vw;
-  border: 2px solid #000;
+  border: 2px solid rebeccapurple;
   margin: auto;
 }
 
 .line-break {
   width: 100px;
+  border: none;
   border-bottom: 2px solid rebeccapurple;
-  margin: 5% auto;
+  margin-top: 5%;
 }
 
 .new-book {
+  margin: auto;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.25em;
-  border-bottom: 1px solid #000;
+}
+
+.new-book > p {
+  margin: 0;
+  padding: 12px 0;
+}
+
+.new-book:nth-child(odd) {
+  background-color: skyblue;
 }
 
 .remove {
@@ -114,6 +124,11 @@ h1 {
   font-weight: 600;
   background-color: rebeccapurple;
   color: white;
+  transition: all 0.3s ease;
+}
+
+#add:hover {
+
 }
 
 input[name]{
@@ -142,6 +157,6 @@ i:hover {
   transform: rotate(360deg);
 }
 
-#hide {
+.hide {
   display: none;
 }

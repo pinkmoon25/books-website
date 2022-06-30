@@ -94,20 +94,23 @@ const listSection = document.querySelector('.booklist');
 const bookForm = document.querySelector('.form');
 const contactSection = document.querySelector('.contact-info');
 
+bookForm.classList.add('hide');
+contactSection.classList.add('hide');
+
 list.addEventListener('click', () => {
-  listSection.removeAttribute('id');
-  bookForm.setAttribute('id', 'hide');
-  contactSection.setAttribute('id', 'hide');
+  listSection.classList.remove('hide');
+  bookForm.classList.add('hide');
+  contactSection.classList.add('hide');
 })
 
 addNew.addEventListener('click', () => {
-  bookForm.removeAttribute('id');
-  listSection.setAttribute('id', 'hide');
-  contactSection.setAttribute('id', 'hide');
+  bookForm.classList.remove('hide');
+  listSection.classList.add('hide');
+  contactSection.classList.add('hide');
 })
 
 contact.addEventListener('click', () => {
-  contactSection.removeAttribute('id');
-  bookForm.setAttribute('id', 'hide');
-  listSection.setAttribute('id', 'hide');
+  contactSection.classList.remove('hide');
+  bookForm.classList.add('hide');
+  listSection.classList.add('hide');
 })
