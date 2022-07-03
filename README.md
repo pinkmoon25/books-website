@@ -1,6 +1,7 @@
 # bookList-website
 
 This is  Pair to Pair project to help you find and remember the best books you read.
+You can add favourite books, or books you'd like to read, you can create a book collection and this information will be stored and saved for you even if the browser is closed, you can access your collection anytime anywhere, a must have app with easy UI/UX.
 
 # Project Name : Awesome Books ♻️
 
