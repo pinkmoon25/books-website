@@ -57,6 +57,10 @@ h1 {
   color: rebeccapurple;
 }
 
+h1 > i {
+  padding-left: 8px;
+}
+
 .book {
   width: 80vw;
   border: 2px solid cadetblue;
