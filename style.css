@@ -39,6 +39,13 @@ a {
   color: #fff;
 }
 
+.date {
+  margin-right: 10vw;
+  padding-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -137,6 +144,11 @@ input[name] {
   border-radius: 4px;
 }
 
+small {
+  font-weight: 600;
+  color: lightgreen;
+}
+
 .address-list {
   display: block;
   list-style-type: disc;
@@ -173,7 +185,7 @@ i:hover {
 }
 
 @media screen and (max-width: 576px) {
-  h3, ul {
+  h3, ul, .date {
     font-size: small;
   }
   h1 {

@@ -2,6 +2,8 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const addBtn = document.getElementById('add');
 const bookList = document.querySelector('.book');
+const form = document.querySelector('form');
+const small = document.createElement('small');
 
 class Book {
   constructor(title, author, id) {
@@ -68,6 +70,12 @@ class Book {
   }
 }
 
+const success = () => {
+  small.innerHTML = '';
+  small.innerText = `${title.value} added to BookList!`;
+  form.appendChild(small);
+};
+
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (title.value === '' || author.value === '') return;
@@ -76,6 +84,7 @@ addBtn.addEventListener('click', (e) => {
   const newBook = new Book(title.value, author.value, bookId);
   Book.addBook(newBook);
   Book.storeBook(newBook);
+  success();
   title.value = '';
   author.value = '';
 });
@@ -114,3 +123,12 @@ contact.addEventListener('click', () => {
   bookForm.classList.add('hide');
   listSection.classList.add('hide');
 });
+
+//DateTime from luxon library
+import {luxon} from "./luxon/luxon.js"
+
+const span = document.querySelector('.date');
+
+const dateTime = luxon.DateTime;
+
+span.textContent = `${dateTime.now().toLocaleString(dateTime.DATETIME_MED)}`;
