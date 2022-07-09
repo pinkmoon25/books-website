@@ -30,8 +30,8 @@ ul {
 
 ul > li:hover {
   transition: 0.3s ease;
-  transform: scale(1.1) skew(10deg);
-  border-bottom: 1px solid rebeccapurple;
+  transform: scale(1.1);
+  border-bottom: 1px solid floralwhite;
 }
 
 a {
@@ -189,7 +189,7 @@ i:hover {
   h3, ul, .date {
     font-size: small;
   }
-  
+
   h1 {
     font-size: 26px;
   }
